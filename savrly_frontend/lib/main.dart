@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
 import 'package:provider/provider.dart';
 import 'provider/user_provider.dart';
-
+import '../screens/auth_screen.dart';
 void main() {
   runApp(
     ChangeNotifierProvider(
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title:'Flutter Demo Home Page'),
     );
   }
 }
