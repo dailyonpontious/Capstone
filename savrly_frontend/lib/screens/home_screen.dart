@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../widgets/bottom_nav_bar.dart';
-import 'package:provider/provider.dart';
-import '../provider/user_provider.dart';
-import '../models/user.dart';
+// import 'package:provider/provider.dart';
+// import '../provider/user_provider.dart';
+// import '../models/user.dart';
 
 
 class MyHomePage extends StatefulWidget {
@@ -22,8 +22,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final userProvider = Provider.of<UserProvider>(context);
-    User? user = userProvider.user;
+    // final userProvider = Provider.of<UserProvider>(context);
+    // User? user = userProvider.user;
 
 
     return Scaffold(

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
 import 'package:provider/provider.dart';
 import 'provider/user_provider.dart';
 import '../screens/auth_screen.dart';
-void main() {
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
   runApp(
     ChangeNotifierProvider(
       create: (_) => UserProvider(),
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title:'Flutter Demo Home Page'),
+      home: const AuthScreen(),
     );
   }
 }
